@@ -1,24 +1,22 @@
 
-  <%= link_to "chatroom",root_path ,class:"item" %>
-    chatroom
+<%= link_to "Chatroom", root_path, class: "item" %>
+<a class="item">
+  Messages
+</a>
+<div class="right menu">
   
-  <a class="item">
-    Messages
-  </a>
-  <div class="right menu">
-    <div class="ui dropdown item">
-      Language <i class="dropdown icon"></i>
-      <div class="menu">
-        <a class="item">English</a>
-        <a class="item">Russian</a>
-        <a class="item">Spanish</a>
-      </div>
-
-    </div>
-     
-    <%= link_to "Log in", login_path, class: "item" %>
-   <%= link_to "Logout", login_path, class: "item" %>
+    
+   
+      <% if logged_in? %>
+        <%= link_to "Logout", logout_path, method: :DELETE, class: "item" %>
+      <% else %>
+        <%= link_to "Log in", login_path, class: "item" %>
+      <% end %>
+    
+  
+  <% if !logged_in? %>
     <div class="item">
-        <div class="ui primary button">Sign Up</div>
+      <%= link_to "Log in", login_path, class: "ui primary button" %>
     </div>
-  </div>
+  <% end %>
+</div>
