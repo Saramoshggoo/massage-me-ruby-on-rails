@@ -4144,3 +4144,2496 @@ Completed 200 OK in 40ms (Views: 2.4ms | ActiveRecord: 1.5ms | Allocations: 1052
 
 
 ChatroomChannel transmitting {"mod_message"=>"<div class=\"event\">\n  <div class=\"content\">\n    <div class=\"summary\">\n      <em>sara</em>: che khabara\n    </div>\n  </div>\n</div>\n"} (via streamed from chatroom_channel)
+Started GET "/" for ::1 at 2020-10-26 13:17:22 -0700
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChatroomController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" ORDER BY "messages"."created_at" DESC LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/models/message.rb:5:in `block in <class:Message>'
+  Rendering chatroom/index.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  Rendered collection of messages/_message.html.erb [6 times] (Duration: 5.8ms | Allocations: 6301)
+  Rendered chatroom/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 7324)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.7ms | Allocations: 299)
+  Rendered layouts/_messages.html.erb (Duration: 0.5ms | Allocations: 172)
+Completed 200 OK in 130ms (Views: 94.7ms | ActiveRecord: 1.3ms | Allocations: 42762)
+
+
+Started GET "/cable" for ::1 at 2020-10-26 13:17:22 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 13:17:22 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/logout" for ::1 at 2020-10-26 13:17:27 -0700
+Processing by SessionController#destroy as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 420)
+
+
+Started GET "/login" for ::1 at 2020-10-26 13:17:27 -0700
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 840)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 20)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.0ms | Allocations: 10304)
+
+
+Started GET "/login" for ::1 at 2020-10-26 13:17:37 -0700
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 340)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 68)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms | Allocations: 9106)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 13:17:37 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 13:17:37 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 13:17:37 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/signup" for ::1 at 2020-10-26 13:18:15 -0700
+Processing by SessionController#signup as HTML
+  Rendering session/signup.html.erb within layouts/application
+  Rendered session/signup.html.erb within layouts/application (Duration: 0.8ms | Allocations: 86)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | Allocations: 84)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.0ms | Allocations: 9002)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 13:18:15 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 13:18:15 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 13:18:15 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 13:25:20 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 13:25:30 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 13:25:30 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 13:30:09 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 13:30:10 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 13:30:10 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 13:32:56 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 13:33:05 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 13:33:05 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/" for ::1 at 2020-10-26 13:33:54 -0700
+Processing by ChatroomController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 361)
+
+
+Started GET "/login" for ::1 at 2020-10-26 13:33:54 -0700
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 612)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.5ms | Allocations: 285)
+  Rendered layouts/_messages.html.erb (Duration: 0.4ms | Allocations: 162)
+Completed 200 OK in 30ms (Views: 28.1ms | ActiveRecord: 0.0ms | Allocations: 11120)
+
+
+Started GET "/signin" for ::1 at 2020-10-26 13:36:22 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/signin"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 13:36:23 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/sigup" for ::1 at 2020-10-26 13:36:28 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/sigup"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/signup" for ::1 at 2020-10-26 13:36:46 -0700
+Processing by SessionController#signup as HTML
+  Rendering session/signup.html.erb within layouts/application
+  Rendered session/signup.html.erb within layouts/application (Duration: 1.4ms | Allocations: 602)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.5ms | Allocations: 285)
+  Rendered layouts/_messages.html.erb (Duration: 0.4ms | Allocations: 159)
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.0ms | Allocations: 11120)
+
+
+Started GET "/cable" for ::1 at 2020-10-26 13:36:46 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 13:36:46 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/signup" for ::1 at 2020-10-26 13:38:54 -0700
+Processing by SessionController#signup as HTML
+  Rendering session/signup.html.erb within layouts/application
+  Rendered session/signup.html.erb within layouts/application (Duration: 1.2ms | Allocations: 736)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.5ms | Allocations: 285)
+  Rendered layouts/_messages.html.erb (Duration: 0.3ms | Allocations: 159)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms | Allocations: 11206)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 13:38:54 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 13:38:54 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 13:38:54 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/signup" for ::1 at 2020-10-26 13:39:21 -0700
+Processing by SessionController#signup as HTML
+  Rendering session/signup.html.erb within layouts/application
+  Rendered session/signup.html.erb within layouts/application (Duration: 1.2ms | Allocations: 736)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.4ms | Allocations: 285)
+  Rendered layouts/_messages.html.erb (Duration: 0.3ms | Allocations: 159)
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.0ms | Allocations: 11215)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 13:39:21 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 13:39:21 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 13:39:21 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/signup" for ::1 at 2020-10-26 13:39:22 -0700
+Processing by SessionController#signup as HTML
+  Rendering session/signup.html.erb within layouts/application
+  Rendered session/signup.html.erb within layouts/application (Duration: 0.7ms | Allocations: 434)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | Allocations: 71)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.0ms | Allocations: 9192)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 13:39:22 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 13:39:22 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 13:39:22 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 13:39:49 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/signin" for ::1 at 2020-10-26 13:39:52 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/signin"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/cable" for ::1 at 2020-10-26 13:39:53 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 13:39:53 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/signup" for ::1 at 2020-10-26 13:40:50 -0700
+Processing by SessionController#signup as HTML
+  Rendering session/signup.html.erb within layouts/application
+  Rendered session/signup.html.erb within layouts/application (Duration: 1.2ms | Allocations: 731)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.4ms | Allocations: 290)
+  Rendered layouts/_messages.html.erb (Duration: 0.2ms | Allocations: 159)
+Completed 200 OK in 979ms (Views: 977.9ms | ActiveRecord: 0.0ms | Allocations: 104358)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 13:40:51 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 13:40:51 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 13:40:51 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/signup" for ::1 at 2020-10-26 13:41:06 -0700
+Processing by SessionController#signup as HTML
+  Rendering session/signup.html.erb within layouts/application
+  Rendered session/signup.html.erb within layouts/application (Duration: 0.7ms | Allocations: 434)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 71)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 815ms (Views: 814.3ms | ActiveRecord: 0.0ms | Allocations: 99479)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 13:41:07 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 13:41:07 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 13:41:07 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 13:41:09 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/signin" for ::1 at 2020-10-26 13:41:10 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/signin"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/cable" for ::1 at 2020-10-26 13:41:12 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 13:41:12 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/login" for ::1 at 2020-10-26 13:41:20 -0700
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 607)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.4ms | Allocations: 70)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.0ms | Allocations: 9456)
+
+
+Started GET "/login" for ::1 at 2020-10-26 13:43:38 -0700
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 609)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.5ms | Allocations: 285)
+  Rendered layouts/_messages.html.erb (Duration: 0.3ms | Allocations: 159)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.0ms | Allocations: 11038)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 13:43:38 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 13:43:38 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 13:43:38 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/login" for ::1 at 2020-10-26 13:45:36 -0700
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 653)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.5ms | Allocations: 290)
+  Rendered layouts/_messages.html.erb (Duration: 0.3ms | Allocations: 159)
+Completed 200 OK in 27ms (Views: 26.4ms | ActiveRecord: 0.0ms | Allocations: 11087)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 13:45:36 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 13:45:36 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 13:45:36 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/signup" for ::1 at 2020-10-26 13:45:42 -0700
+Processing by SessionController#signup as HTML
+  Rendering session/signup.html.erb within layouts/application
+  Rendered session/signup.html.erb within layouts/application (Duration: 2.3ms | Allocations: 730)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | Allocations: 71)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.0ms | Allocations: 9574)
+
+
+Started GET "/login" for ::1 at 2020-10-26 13:46:08 -0700
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 650)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.5ms | Allocations: 285)
+  Rendered layouts/_messages.html.erb (Duration: 0.3ms | Allocations: 159)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.0ms | Allocations: 11079)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 13:46:08 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 13:46:08 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 13:46:08 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/login" for ::1 at 2020-10-26 13:47:04 -0700
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 650)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.4ms | Allocations: 290)
+  Rendered layouts/_messages.html.erb (Duration: 0.2ms | Allocations: 159)
+Completed 200 OK in 894ms (Views: 893.3ms | ActiveRecord: 0.0ms | Allocations: 101824)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 13:47:05 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 13:47:05 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 13:47:05 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/login" for ::1 at 2020-10-26 13:47:09 -0700
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 369)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.0ms | Allocations: 9077)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 13:47:09 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 13:47:09 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 13:47:09 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/login" for ::1 at 2020-10-26 13:48:02 -0700
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 648)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.4ms | Allocations: 290)
+  Rendered layouts/_messages.html.erb (Duration: 0.2ms | Allocations: 159)
+Completed 200 OK in 837ms (Views: 835.5ms | ActiveRecord: 0.0ms | Allocations: 101664)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 13:48:03 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 13:48:03 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 13:48:03 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/login" for ::1 at 2020-10-26 13:48:11 -0700
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 654)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.4ms | Allocations: 285)
+  Rendered layouts/_messages.html.erb (Duration: 0.3ms | Allocations: 159)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.0ms | Allocations: 11141)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 13:48:11 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 13:48:11 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 13:48:11 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/login" for ::1 at 2020-10-26 13:49:19 -0700
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1194)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2508)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h2 class="ui center aligned large header">
+  Welcome to MessageMe - <em>a complete Chat App</em>
+</h2>
+
+<h4 class="ui center aligned medium icon header">
+  <i class="circular orange power off tiny icon"></i>
+  Log in to continue
+</h4>
+
+
+<div class="ui placeholder segment">
+  <div class="ui two column very relaxed stackable grid">
+    <div class="column">
+      <%= form_for(:session, html: {class: "ui form", role: "form"}, url: login_path) do |f| %>
+        <div class="field">
+          <%= f.label :username, "Username" %>
+          <div class="ui left icon input">
+            <%= f.text_field :username, placeholder: "Username" %>
+            <i class="user icon"></i>
+          </div>
+        </div>
+        <div class="field">
+          <%= f.label :password, "Password" %>
+          <div class="ui left icon input">
+            <%= f.password_field :password, placeholder: "Password" %>
+            <i class="lock icon"></i>
+          </div>
+        </div>
+        <%= f.button "Login", class: "ui orange submit button" %>
+      <% end %>
+    </div>
+    <div class="middle aligned column">
+    
+      <div class="ui orange submit button ">
+        <%= link_to "Sign Up" ,signup_path class:'signupbutton' %> 
+        <i class="signup icon"></i>
+      
+      </div>
+    </div>
+  </div>
+  <div class="ui vertical divider">
+    Or
+  </div>
+</div>
+
+):
+1:    <h2 class="ui center aligned large header">
+2:      Welcome to MessageMe - <em>a complete Chat App</em>
+3:    </h2>
+4:    
+5:    <h4 class="ui center aligned medium icon header">
+6:      <i class="circular orange power off tiny icon"></i>
+7:      Log in to continue
+8:    </h4>
+9:    
+10:    
+11:    <div class="ui placeholder segment">
+12:      <div class="ui two column very relaxed stackable grid">
+13:        <div class="column">
+14:          <%= form_for(:session, html: {class: "ui form", role: "form"}, url: login_path) do |f| %>
+15:            <div class="field">
+16:              <%= f.label :username, "Username" %>
+17:              <div class="ui left icon input">
+18:                <%= f.text_field :username, placeholder: "Username" %>
+19:                <i class="user icon"></i>
+20:              </div>
+21:            </div>
+22:            <div class="field">
+23:              <%= f.label :password, "Password" %>
+24:              <div class="ui left icon input">
+25:                <%= f.password_field :password, placeholder: "Password" %>
+26:                <i class="lock icon"></i>
+27:              </div>
+28:            </div>
+29:            <%= f.button "Login", class: "ui orange submit button" %>
+30:          <% end %>
+31:        </div>
+32:        <div class="middle aligned column">
+33:        
+34:          <div class="ui orange submit button ">
+35:            <%= link_to "Sign Up" ,signup_path class:'signupbutton' %> 
+36:            <i class="signup icon"></i>
+37:          
+38:          </div>
+39:        </div>
+40:      </div>
+41:      <div class="ui vertical divider">
+42:        Or
+43:      </div>
+44:    </div>
+  
+app/views/session/new.html.erb:35: syntax error, unexpected tLABEL, expecting do or '{' or '('
+app/views/session/new.html.erb:35: syntax error, unexpected tLABEL, expecting do or '{' or '('
+app/views/session/new.html.erb:35: syntax error, unexpected tLABEL, expecting do or '{' or '('
+app/views/session/new.html.erb:35: syntax error, unexpected tLABEL, expecting do or '{' or '('
+app/views/session/new.html.erb:35: syntax error, unexpected tLABEL, expecting do or '{' or '('
+app/views/session/new.html.erb:35: syntax error, unexpected tLABEL, expecting do or '{' or '('
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 13:49:20 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/login" for ::1 at 2020-10-26 13:49:27 -0700
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 665)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.5ms | Allocations: 285)
+  Rendered layouts/_messages.html.erb (Duration: 0.3ms | Allocations: 159)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms | Allocations: 11098)
+
+
+Started GET "/cable" for ::1 at 2020-10-26 13:49:27 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 13:49:27 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/login" for ::1 at 2020-10-26 13:50:45 -0700
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 658)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.7ms | Allocations: 285)
+  Rendered layouts/_messages.html.erb (Duration: 0.7ms | Allocations: 159)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.0ms | Allocations: 11077)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 13:50:45 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 13:50:45 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 13:50:45 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/signup" for ::1 at 2020-10-26 13:50:50 -0700
+Processing by SessionController#signup as HTML
+  Rendering session/signup.html.erb within layouts/application
+  Rendered session/signup.html.erb within layouts/application (Duration: 2.4ms | Allocations: 735)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 71)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 17ms (Views: 14.8ms | ActiveRecord: 0.0ms | Allocations: 9578)
+
+
+Started POST "/signup" for ::1 at 2020-10-26 13:52:36 -0700
+Processing by SessionController#create as HTML
+  Parameters: {"authenticity_token"=>"CE3SSdy6MQTbDPwdlaEtwbHHk3BTy40cMkUH2wWSx0ZjpA4r6mkrcp2pOb8/BDaTAmICvIRSZiUAHBWwV11UZg==", "session"=>{"username"=>"sara.moshkgou@gmail.com", "password"=>"[FILTERED]"}, "button"=>""}
+No template found for SessionController#create, rendering head :no_content
+Completed 204 No Content in 5ms (ActiveRecord: 0.0ms | Allocations: 2161)
+
+
+Started GET "/signup" for ::1 at 2020-10-26 13:52:42 -0700
+Processing by SessionController#signup as HTML
+  Rendering session/signup.html.erb within layouts/application
+  Rendered session/signup.html.erb within layouts/application (Duration: 1.0ms | Allocations: 427)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 68)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 904ms (Views: 903.6ms | ActiveRecord: 0.0ms | Allocations: 100600)
+
+
+Started GET "/signup" for ::1 at 2020-10-26 13:52:43 -0700
+Processing by SessionController#signup as HTML
+  Rendering session/signup.html.erb within layouts/application
+  Rendered session/signup.html.erb within layouts/application (Duration: 0.5ms | Allocations: 427)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 68)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 9189)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 13:52:43 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 13:52:43 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 13:52:43 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/login" for ::1 at 2020-10-26 13:52:44 -0700
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 369)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | Allocations: 68)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms | Allocations: 9073)
+
+
+Started GET "/login" for ::1 at 2020-10-26 13:53:25 -0700
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 369)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 68)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 840ms (Views: 839.1ms | ActiveRecord: 0.0ms | Allocations: 100277)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 13:53:26 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 13:53:26 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 13:53:26 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/login" for ::1 at 2020-10-26 13:53:29 -0700
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 369)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 68)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.0ms | Allocations: 9072)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 13:53:29 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 13:53:29 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 13:53:29 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/signup" for ::1 at 2020-10-26 13:53:31 -0700
+Processing by SessionController#signup as HTML
+  Rendering session/signup.html.erb within layouts/application
+  Rendered session/signup.html.erb within layouts/application (Duration: 1.2ms | Allocations: 427)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 68)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.0ms | Allocations: 9122)
+
+
+Started GET "/login" for ::1 at 2020-10-26 13:56:09 -0700
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 369)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 68)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 863ms (Views: 862.5ms | ActiveRecord: 0.0ms | Allocations: 100908)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 13:56:10 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 13:56:10 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 13:56:10 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/signup" for ::1 at 2020-10-26 13:56:11 -0700
+Processing by SessionController#signup as HTML
+  Rendering session/signup.html.erb within layouts/application
+  Rendered session/signup.html.erb within layouts/application (Duration: 1.5ms | Allocations: 427)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 68)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 24ms (Views: 23.7ms | ActiveRecord: 0.0ms | Allocations: 9127)
+
+
+Started GET "/" for ::1 at 2020-10-26 13:56:43 -0700
+Processing by ChatroomController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 352)
+
+
+Started GET "/login" for ::1 at 2020-10-26 13:56:43 -0700
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 369)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 68)
+  Rendered layouts/_messages.html.erb (Duration: 0.2ms | Allocations: 20)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.0ms | Allocations: 9106)
+
+
+Started GET "/signup" for ::1 at 2020-10-26 13:56:54 -0700
+Processing by SessionController#signup as HTML
+  Rendering session/signup.html.erb within layouts/application
+  Rendered session/signup.html.erb within layouts/application (Duration: 2.1ms | Allocations: 427)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 68)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 27ms (Views: 26.3ms | ActiveRecord: 0.0ms | Allocations: 9128)
+
+
+Started GET "/signup" for ::1 at 2020-10-26 13:57:01 -0700
+Processing by SessionController#signup as HTML
+  Rendering session/signup.html.erb within layouts/application
+  Rendered session/signup.html.erb within layouts/application (Duration: 1.9ms | Allocations: 427)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 68)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 49ms (Views: 47.7ms | ActiveRecord: 0.0ms | Allocations: 9135)
+
+
+Started GET "/signup" for ::1 at 2020-10-26 14:08:44 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/saramoshggoo/Desktop/Ruby-on-Rails/assignment2/messageme-chat/app/controllers/session_controller.rb:20: syntax error, unexpected tGVAR, expecting do or '{' or '('
+...if password==confirmpassword $$ user.save
+...                             ^~
+/Users/saramoshggoo/Desktop/Ruby-on-Rails/assignment2/messageme-chat/app/controllers/session_controller.rb:24: else without rescue is useless
+    else
+    ^~~~
+/Users/saramoshggoo/Desktop/Ruby-on-Rails/assignment2/messageme-chat/app/controllers/session_controller.rb:47: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/session_controller.rb:20: syntax error, unexpected tGVAR, expecting do or '{' or '('
+app/controllers/session_controller.rb:24: else without rescue is useless
+app/controllers/session_controller.rb:47: syntax error, unexpected end, expecting end-of-input
+app/controllers/session_controller.rb:20: syntax error, unexpected tGVAR, expecting do or '{' or '('
+app/controllers/session_controller.rb:24: else without rescue is useless
+app/controllers/session_controller.rb:47: syntax error, unexpected end, expecting end-of-input
+app/controllers/session_controller.rb:20: syntax error, unexpected tGVAR, expecting do or '{' or '('
+app/controllers/session_controller.rb:24: else without rescue is useless
+app/controllers/session_controller.rb:47: syntax error, unexpected end, expecting end-of-input
+Started GET "/signup" for ::1 at 2020-10-26 14:09:06 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/saramoshggoo/Desktop/Ruby-on-Rails/assignment2/messageme-chat/app/controllers/session_controller.rb:20: syntax error, unexpected tGVAR, expecting do or '{' or '('
+...f (password==confirmpassword $$ user.save)
+...                             ^~):
+  
+app/controllers/session_controller.rb:20: syntax error, unexpected tGVAR, expecting do or '{' or '('
+app/controllers/session_controller.rb:20: syntax error, unexpected tGVAR, expecting do or '{' or '('
+app/controllers/session_controller.rb:20: syntax error, unexpected tGVAR, expecting do or '{' or '('
+Started GET "/signup" for ::1 at 2020-10-26 14:09:22 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionController#signup as HTML
+  Rendering session/signup.html.erb within layouts/application
+  Rendered session/signup.html.erb within layouts/application (Duration: 0.5ms | Allocations: 435)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 71)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 21ms (Views: 20.6ms | ActiveRecord: 0.0ms | Allocations: 9310)
+
+
+Started GET "/cable" for ::1 at 2020-10-26 14:09:22 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 14:09:22 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started POST "/signup" for ::1 at 2020-10-26 14:09:40 -0700
+Processing by SessionController#create as HTML
+  Parameters: {"authenticity_token"=>"Jpdt6daA3I0kwLxhO9/WYya/xa2adeg+41L+nFVICVFKN112bIeUDD+V2nvRDaJBtHgAPb8G1EEMQi7XhISz3g==", "session"=>{"username"=>"shadi", "password"=>"[FILTERED]"}, "button"=>""}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1226)
+
+
+  
+SyntaxError (/Users/saramoshggoo/Desktop/Ruby-on-Rails/assignment2/messageme-chat/app/models/user.rb:6: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+  has_many :messages
+           ^):
+  
+app/models/user.rb:6: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/models/user.rb:6: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/models/user.rb:6: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/controllers/session_controller.rb:19:in `create'
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 14:09:40 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started POST "/signup" for ::1 at 2020-10-26 14:10:23 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionController#create as HTML
+  Parameters: {"authenticity_token"=>"Jpdt6daA3I0kwLxhO9/WYya/xa2adeg+41L+nFVICVFKN112bIeUDD+V2nvRDaJBtHgAPb8G1EEMQi7XhISz3g==", "session"=>{"username"=>"shadi", "password"=>"[FILTERED]"}, "button"=>""}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.6ms | Allocations: 5536)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/session_controller.rb:19:in `create'
+Started POST "/signup" for ::1 at 2020-10-26 14:11:31 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionController#create as HTML
+  Parameters: {"authenticity_token"=>"Jpdt6daA3I0kwLxhO9/WYya/xa2adeg+41L+nFVICVFKN112bIeUDD+V2nvRDaJBtHgAPb8G1EEMQi7XhISz3g==", "session"=>{"username"=>"shadi", "password"=>"[FILTERED]"}, "button"=>""}
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms | Allocations: 1860)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: message):
+  
+app/controllers/session_controller.rb:45:in `message_params'
+app/controllers/session_controller.rb:19:in `create'
+Started POST "/signup" for ::1 at 2020-10-26 14:11:36 -0700
+Processing by SessionController#create as HTML
+  Parameters: {"authenticity_token"=>"Jpdt6daA3I0kwLxhO9/WYya/xa2adeg+41L+nFVICVFKN112bIeUDD+V2nvRDaJBtHgAPb8G1EEMQi7XhISz3g==", "session"=>{"username"=>"shadi", "password"=>"[FILTERED]"}, "button"=>""}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 674)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: message):
+  
+app/controllers/session_controller.rb:45:in `message_params'
+app/controllers/session_controller.rb:19:in `create'
+Started GET "/" for ::1 at 2020-10-26 14:19:23 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ChatroomController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 404)
+
+
+Started GET "/login" for ::1 at 2020-10-26 14:19:24 -0700
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 663)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 1.0ms | Allocations: 285)
+  Rendered layouts/_messages.html.erb (Duration: 0.8ms | Allocations: 162)
+Completed 200 OK in 26ms (Views: 24.0ms | ActiveRecord: 0.0ms | Allocations: 11171)
+
+
+Started GET "/cable" for ::1 at 2020-10-26 14:19:24 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 14:19:24 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/signup" for ::1 at 2020-10-26 14:19:31 -0700
+Processing by SessionController#signup as HTML
+  Rendering session/signup.html.erb within layouts/application
+  Rendered session/signup.html.erb within layouts/application (Duration: 2.1ms | Allocations: 730)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 71)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.0ms | Allocations: 9578)
+
+
+Started POST "/signup" for ::1 at 2020-10-26 14:19:38 -0700
+Processing by SessionController#create as HTML
+  Parameters: {"authenticity_token"=>"dYz2RHDs3+dfe3aTVOUwaagZ3SY/+y/FlPyPxuhuG/oeZSomRj/FkRneszH+QCs7G7xM6uhixPympZ2tuqGI2g==", "session"=>{"username"=>"shadi", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "button"=>""}
+Completed 400 Bad Request in 6ms (ActiveRecord: 0.0ms | Allocations: 2000)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: message):
+  
+app/controllers/session_controller.rb:45:in `message_params'
+app/controllers/session_controller.rb:19:in `create'
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 14:19:39 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 14:21:18 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 14:21:18 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started POST "/signup" for ::1 at 2020-10-26 14:21:24 -0700
+Processing by SessionController#create as HTML
+  Parameters: {"authenticity_token"=>"MOH4FKBO4EnH4j60Vctv0xUs3hoixkLgbPg+CiVITBxcQciLGkmoyNy3WK6/GRvxh+sbige1fp+D6O5B9IT2kw==", "session"=>{"username"=>"shadi", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "button"=>""}
+Completed 400 Bad Request in 4ms (ActiveRecord: 0.0ms | Allocations: 1971)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/session_controller.rb:45:in `message_params'
+app/controllers/session_controller.rb:19:in `create'
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 14:21:24 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started POST "/signup" for ::1 at 2020-10-26 14:24:55 -0700
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionController#create as HTML
+  Parameters: {"authenticity_token"=>"MOH4FKBO4EnH4j60Vctv0xUs3hoixkLgbPg+CiVITBxcQciLGkmoyNy3WK6/GRvxh+sbige1fp+D6O5B9IT2kw==", "session"=>{"username"=>"shadi", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "button"=>""}
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.0ms | Allocations: 1931)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/session_controller.rb:45:in `user_params'
+app/controllers/session_controller.rb:19:in `create'
+Started GET "/cable" for ::1 at 2020-10-26 14:24:57 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 14:24:57 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/login" for ::1 at 2020-10-26 14:24:58 -0700
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 378)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 20ms (Views: 19.5ms | ActiveRecord: 0.0ms | Allocations: 9247)
+
+
+Started POST "/login" for ::1 at 2020-10-26 14:25:08 -0700
+Processing by SessionController#login as HTML
+  Parameters: {"authenticity_token"=>"TFlpa8Ol2nsQu3Mwcxwz61h5QDJqK2tN2lsnuyGch2ed23yEiIZw+l5JtPYVNyiPiJOzuhznBvVe8bnmHFgdPA==", "session"=>{"username"=>"sara", "password"=>"[FILTERED]"}, "button"=>""}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "sara"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:8:in `login'
+Redirected to http://localhost:3000/
+Completed 302 Found in 215ms (ActiveRecord: 1.6ms | Allocations: 4676)
+
+
+Started GET "/" for ::1 at 2020-10-26 14:25:09 -0700
+Processing by ChatroomController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT "messages".* FROM "messages" ORDER BY "messages"."created_at" DESC LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/models/message.rb:5:in `block in <class:Message>'
+  Rendering chatroom/index.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  Rendered collection of messages/_message.html.erb [6 times] (Duration: 6.0ms | Allocations: 5215)
+  Rendered chatroom/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 5917)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 73)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 20)
+Completed 200 OK in 26ms (Views: 16.9ms | ActiveRecord: 1.3ms | Allocations: 20511)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 14:25:09 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 14:25:09 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 14:25:09 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/logout" for ::1 at 2020-10-26 14:25:12 -0700
+Processing by SessionController#destroy as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 351)
+
+
+Started GET "/login" for ::1 at 2020-10-26 14:25:12 -0700
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 377)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 20)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 9118)
+
+
+Started GET "/signup" for ::1 at 2020-10-26 14:25:15 -0700
+Processing by SessionController#signup as HTML
+  Rendering session/signup.html.erb within layouts/application
+  Rendered session/signup.html.erb within layouts/application (Duration: 1.5ms | Allocations: 427)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | Allocations: 68)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 30ms (Views: 29.3ms | ActiveRecord: 0.0ms | Allocations: 9131)
+
+
+Started POST "/signup" for ::1 at 2020-10-26 14:25:28 -0700
+Processing by SessionController#create as HTML
+  Parameters: {"authenticity_token"=>"KdxjzCUYh/8xfFqXe5Sh3Wd9ND8no4TeO6w52okGQLpCNb+uE8udiXfZnzXRMbqP1Nil8/A6b+cJ9Sux28nTmg==", "session"=>{"username"=>"shadi", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "button"=>""}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 705)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/session_controller.rb:45:in `user_params'
+app/controllers/session_controller.rb:19:in `create'
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 14:25:28 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/" for ::1 at 2020-10-26 14:28:01 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChatroomController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms | Allocations: 489)
+
+
+Started GET "/login" for ::1 at 2020-10-26 14:28:01 -0700
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 7.1ms | Allocations: 1169)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 1.0ms | Allocations: 299)
+  Rendered layouts/_messages.html.erb (Duration: 0.9ms | Allocations: 172)
+Completed 200 OK in 189ms (Views: 185.9ms | ActiveRecord: 0.0ms | Allocations: 38768)
+
+
+Started GET "/cable" for ::1 at 2020-10-26 14:28:01 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 14:28:02 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/signup" for ::1 at 2020-10-26 14:28:04 -0700
+Processing by SessionController#signup as HTML
+  Rendering session/signup.html.erb within layouts/application
+  Rendered session/signup.html.erb within layouts/application (Duration: 1.7ms | Allocations: 738)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | Allocations: 71)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.0ms | Allocations: 9666)
+
+
+Started POST "/signup" for ::1 at 2020-10-26 14:28:11 -0700
+Processing by SessionController#create as HTML
+  Parameters: {"authenticity_token"=>"yd9IMiqeR9lGMIKDPjyWhj6k1UqSoUqGVld6ZZ1SrjiiNpRQHE1drwCVRyGUmY3UjQFEhkU4ob9kDmgOz509GA==", "session"=>{"username"=>"shadi", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "button"=>""}
+Completed 400 Bad Request in 8ms (ActiveRecord: 0.0ms | Allocations: 2231)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/session_controller.rb:45:in `user_params'
+app/controllers/session_controller.rb:19:in `create'
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 14:28:11 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 14:29:35 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 14:29:35 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started POST "/signup" for ::1 at 2020-10-26 14:29:42 -0700
+Processing by SessionController#create as HTML
+  Parameters: {"authenticity_token"=>"nOB5qaWlJUfsTHiXgOtv3NNArayFRnqAHwUn9P7IlLrwQEk2H6JtxvcZHo1qORv+QYdoPKA1Rv/wFfe/LwQuNQ==", "session"=>{"username"=>"shadi", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "button"=>""}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 696)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/session_controller.rb:45:in `user_params'
+app/controllers/session_controller.rb:19:in `create'
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 14:29:42 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 14:32:47 -0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 14:32:47 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started POST "/signup" for ::1 at 2020-10-26 14:33:01 -0700
+Processing by SessionController#create as HTML
+  Parameters: {"authenticity_token"=>"nOB5qaWlJUfsTHiXgOtv3NNArayFRnqAHwUn9P7IlLrwQEk2H6JtxvcZHo1qORv+QYdoPKA1Rv/wFfe/LwQuNQ==", "session"=>{"username"=>"shadi", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "button"=>""}
+Completed 400 Bad Request in 6ms (ActiveRecord: 0.0ms | Allocations: 2329)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/session_controller.rb:45:in `user_params'
+app/controllers/session_controller.rb:19:in `create'
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 14:33:02 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/" for ::1 at 2020-10-26 14:38:46 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ChatroomController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 430)
+
+
+Started GET "/login" for ::1 at 2020-10-26 14:38:46 -0700
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1053)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 1.2ms | Allocations: 294)
+  Rendered layouts/_messages.html.erb (Duration: 1.3ms | Allocations: 172)
+Completed 200 OK in 76ms (Views: 74.8ms | ActiveRecord: 0.0ms | Allocations: 25156)
+
+
+Started GET "/cable" for ::1 at 2020-10-26 14:38:46 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 14:38:46 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/signup" for ::1 at 2020-10-26 14:38:48 -0700
+Processing by SessionController#signup as HTML
+  Rendering session/signup.html.erb within layouts/application
+  Rendered session/signup.html.erb within layouts/application (Duration: 2.8ms | Allocations: 645)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 71)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 30ms (Views: 27.5ms | ActiveRecord: 0.0ms | Allocations: 9571)
+
+
+Started GET "/signup" for ::1 at 2020-10-26 14:39:11 -0700
+Processing by SessionController#signup as HTML
+  Rendering session/signup.html.erb within layouts/application
+  Rendered session/signup.html.erb within layouts/application (Duration: 1.1ms | Allocations: 658)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.5ms | Allocations: 285)
+  Rendered layouts/_messages.html.erb (Duration: 0.3ms | Allocations: 159)
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.0ms | Allocations: 11275)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 14:39:12 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 14:39:12 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 14:39:12 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started POST "/signup" for ::1 at 2020-10-26 14:39:22 -0700
+Processing by SessionController#create as HTML
+  Parameters: {"authenticity_token"=>"dg8tG2AsnD4ply2XJQYwbxReGLTJqJbMn9BFiL9l50carx2E2ivUvzLCS43P1ERNhpndJOzbqrNwwJXDbqldyA==", "user"=>{"username"=>"shadi", "password"=>"[FILTERED]"}, "button"=>""}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 3255)
+
+
+  
+SyntaxError (/Users/saramoshggoo/Desktop/Ruby-on-Rails/assignment2/messageme-chat/app/models/user.rb:6: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+  has_many :messages
+           ^):
+  
+app/models/user.rb:6: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/models/user.rb:6: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/models/user.rb:6: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/controllers/session_controller.rb:19:in `create'
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 14:39:22 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 14:39:51 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 14:39:51 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started POST "/signup" for ::1 at 2020-10-26 14:39:54 -0700
+Processing by SessionController#create as HTML
+  Parameters: {"authenticity_token"=>"dg8tG2AsnD4ply2XJQYwbxReGLTJqJbMn9BFiL9l50carx2E2ivUvzLCS43P1ERNhpndJOzbqrNwwJXDbqldyA==", "user"=>{"username"=>"shadi", "password"=>"[FILTERED]"}, "button"=>""}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/session_controller.rb:20:in `create'
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "shadi"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:20:in `create'
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "shadi"], ["password_digest", "$2a$12$obHltOkpvFpTzQPQuvm9AeGdpKlEQ4hMyvl1qADJXUbK72EtV5Rbu"], ["created_at", "2020-10-26 21:39:55.211628"], ["updated_at", "2020-10-26 21:39:55.211628"]]
+  ↳ app/controllers/session_controller.rb:20:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/session_controller.rb:20:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 238ms (ActiveRecord: 3.3ms | Allocations: 9747)
+
+
+Started GET "/" for ::1 at 2020-10-26 14:39:55 -0700
+Processing by ChatroomController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" ORDER BY "messages"."created_at" DESC LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/models/message.rb:5:in `block in <class:Message>'
+  Rendering chatroom/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  Rendered collection of messages/_message.html.erb [6 times] (Duration: 11.8ms | Allocations: 6386)
+  Rendered chatroom/index.html.erb within layouts/application (Duration: 14.0ms | Allocations: 7126)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 73)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 20)
+Completed 200 OK in 36ms (Views: 24.4ms | ActiveRecord: 0.9ms | Allocations: 22297)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 14:39:55 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 14:39:55 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 14:39:55 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started POST "/message" for ::1 at 2020-10-26 14:40:01 -0700
+Processing by MessagesController#create as JS
+  Parameters: {"message"=>{"body"=>"khoobi"}, "button"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Started POST "/message" for ::1 at 2020-10-26 14:40:01 -0700
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/messages_controller.rb:6:in `create'
+  [1m[36mMessage Create (0.4ms)[0m  [1m[32mINSERT INTO "messages" ("body", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "khoobi"], ["user_id", 2], ["created_at", "2020-10-26 21:40:01.208488"], ["updated_at", "2020-10-26 21:40:01.208488"]]
+  ↳ app/controllers/messages_controller.rb:6:in `create'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/messages_controller.rb:6:in `create'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendered messages/_message.html.erb (Duration: 1.3ms | Allocations: 496)
+Processing by MessagesController#create as JS
+  Parameters: {"message"=>{"body"=>""}, "button"=>""}
+[ActionCable] Broadcasting to chatroom_channel: {:mod_message=>"<div class=\"event\">\n  <div class=\"content\">\n    <div class=\"summary\">\n      <em>shadi</em>: khoobi\n    </div>\n  </div>\n</div>\n"}
+Completed 200 OK in 17ms (Views: 3.2ms | ActiveRecord: 1.7ms | Allocations: 7023)
+
+
+ChatroomChannel transmitting {"mod_message"=>"<div class=\"event\">\n  <div class=\"content\">\n    <div class=\"summary\">\n      <em>shadi</em>: khoobi\n    </div>\n  </div>\n</div>\n"} (via streamed from chatroom_channel)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+No template found for MessagesController#create, rendering head :no_content
+Completed 204 No Content in 17ms (ActiveRecord: 0.2ms | Allocations: 7429)
+
+
+Started GET "/cable" for ::1 at 2020-10-26 19:58:37 -0700
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 19:58:37 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/" for ::1 at 2020-10-26 20:07:27 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ChatroomController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" ORDER BY "messages"."created_at" DESC LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/models/message.rb:5:in `block in <class:Message>'
+  Rendering chatroom/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  Rendered collection of messages/_message.html.erb [7 times] (Duration: 25.2ms | Allocations: 7058)
+  Rendered chatroom/index.html.erb within layouts/application (Duration: 31.2ms | Allocations: 8081)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 1.1ms | Allocations: 299)
+  Rendered layouts/_messages.html.erb (Duration: 0.8ms | Allocations: 172)
+Completed 200 OK in 168ms (Views: 128.3ms | ActiveRecord: 2.0ms | Allocations: 44095)
+
+
+Started GET "/cable" for ::1 at 2020-10-26 20:07:28 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 20:07:28 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/logout" for ::1 at 2020-10-26 20:07:32 -0700
+Processing by SessionController#destroy as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 438)
+
+
+Started GET "/login" for ::1 at 2020-10-26 20:07:32 -0700
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 893)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 20)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.0ms | Allocations: 10486)
+
+
+Started GET "/signup" for ::1 at 2020-10-26 20:07:34 -0700
+Processing by SessionController#signup as HTML
+  Rendering session/signup.html.erb within layouts/application
+  Rendered session/signup.html.erb within layouts/application (Duration: 2.1ms | Allocations: 744)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | Allocations: 71)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.0ms | Allocations: 9691)
+
+
+Started GET "/cable" for ::1 at 2020-10-26 20:07:37 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 20:07:37 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/signup" for ::1 at 2020-10-26 20:07:51 -0700
+Processing by SessionController#signup as HTML
+  Rendering session/signup.html.erb within layouts/application
+  Rendered session/signup.html.erb within layouts/application (Duration: 1.3ms | Allocations: 735)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.7ms | Allocations: 285)
+  Rendered layouts/_messages.html.erb (Duration: 0.5ms | Allocations: 159)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.0ms | Allocations: 11356)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 20:07:51 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 20:07:51 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 20:07:51 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started POST "/signup" for ::1 at 2020-10-26 20:08:01 -0700
+Processing by SessionController#create as HTML
+  Parameters: {"authenticity_token"=>"lRhXtJmIaL7/Tgz9yWrFsOpskiSg13OkMiI5jwg9fTD5uGcrI48gP+QbaucjuLGSeKtXtIWkT9vdMunE2fHHvw==", "user"=>{"username"=>"shadi", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "button"=>""}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/session_controller.rb:20:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "shadi"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:20:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/session_controller.rb:20:in `create'
+  Rendering session/signup.html.erb within layouts/application
+  Rendered session/signup.html.erb within layouts/application (Duration: 0.7ms | Allocations: 467)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 71)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 230ms (Views: 9.7ms | ActiveRecord: 0.3ms | Allocations: 14510)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 20:08:01 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 20:08:01 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 20:08:01 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/signup" for ::1 at 2020-10-26 20:08:14 -0700
+Processing by SessionController#signup as HTML
+  Rendering session/signup.html.erb within layouts/application
+  Rendered session/signup.html.erb within layouts/application (Duration: 0.8ms | Allocations: 427)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 68)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.0ms | Allocations: 9228)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 20:08:14 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 20:08:14 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 20:08:14 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 20:08:17 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 20:08:17 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 20:08:17 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/login" for ::1 at 2020-10-26 20:08:17 -0700
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 662)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 9615)
+
+
+Started POST "/login" for ::1 at 2020-10-26 20:08:25 -0700
+Processing by SessionController#login as HTML
+  Parameters: {"authenticity_token"=>"gb15DkUioLsSPsvTSGSbI+jY3PGZQMSTUjRztY9vOx1QP2zhDgEKOlzMDBUuT4BHODIvee+MqSvWnu3osquhRg==", "session"=>{"username"=>"shadi", "password"=>"[FILTERED]"}, "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "shadi"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:8:in `login'
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 366)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 68)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 9)
+Completed 200 OK in 219ms (Views: 10.9ms | ActiveRecord: 0.2ms | Allocations: 9935)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 20:08:25 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 20:08:25 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 20:08:25 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/cable" for ::1 at 2020-10-26 20:09:26 -0700
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 20:09:27 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/signup" for ::1 at 2020-10-26 20:09:45 -0700
+Processing by SessionController#signup as HTML
+  Rendering session/signup.html.erb within layouts/application
+  Rendered session/signup.html.erb within layouts/application (Duration: 20.0ms | Allocations: 1258)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 1.0ms | Allocations: 298)
+  Rendered layouts/_messages.html.erb (Duration: 0.7ms | Allocations: 175)
+Completed 200 OK in 160ms (Views: 150.5ms | ActiveRecord: 0.0ms | Allocations: 26071)
+
+
+Started GET "/cable" for ::1 at 2020-10-26 20:09:45 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 20:09:45 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started POST "/signup" for ::1 at 2020-10-26 20:10:03 -0700
+Processing by SessionController#create as HTML
+  Parameters: {"authenticity_token"=>"26nVxfBDQKbroW5vjJzTxQmKp1sSHfmUtp2ouMBzL2e3CeVaSkQIJ/D0CHVmTqfnm01iyzduxetZjXjzEb+V6A==", "user"=>{"username"=>"shadim", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "button"=>""}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/session_controller.rb:20:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "shadim"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:20:in `create'
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "shadim"], ["password_digest", "$2a$12$pomktXfRVix5tGGh7EBbIevJYGPrtZn.KYJz6lRAOZRhE.VJSjhjO"], ["created_at", "2020-10-27 03:10:03.503574"], ["updated_at", "2020-10-27 03:10:03.503574"]]
+  ↳ app/controllers/session_controller.rb:20:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/session_controller.rb:20:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 227ms (ActiveRecord: 2.7ms | Allocations: 9932)
+
+
+Started GET "/" for ::1 at 2020-10-26 20:10:03 -0700
+Processing by ChatroomController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" ORDER BY "messages"."created_at" DESC LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/models/message.rb:5:in `block in <class:Message>'
+  Rendering chatroom/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  Rendered collection of messages/_message.html.erb [7 times] (Duration: 24.2ms | Allocations: 7109)
+  Rendered chatroom/index.html.erb within layouts/application (Duration: 26.4ms | Allocations: 7844)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 20)
+Completed 200 OK in 51ms (Views: 39.3ms | ActiveRecord: 1.2ms | Allocations: 23049)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 20:10:03 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 20:10:03 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 20:10:03 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/logout" for ::1 at 2020-10-26 20:10:13 -0700
+Processing by SessionController#destroy as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 366)
+
+
+Started GET "/login" for ::1 at 2020-10-26 20:10:14 -0700
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 672)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.8ms | Allocations: 70)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 20)
+Completed 200 OK in 29ms (Views: 27.6ms | ActiveRecord: 0.0ms | Allocations: 9655)
+
+
+Started POST "/login" for ::1 at 2020-10-26 20:10:24 -0700
+Processing by SessionController#login as HTML
+  Parameters: {"authenticity_token"=>"uYQ69X+M2X5KnoFcFqVpnpJZmZtwbF2LLWGIaT1NWxJoBi8aNK9z/wRsRppwjnL6QrNqEwagMDOpyxY0AInBSQ==", "session"=>{"username"=>"shadim", "password"=>"[FILTERED]"}, "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "shadim"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:8:in `login'
+Redirected to http://localhost:3000/
+Completed 302 Found in 213ms (ActiveRecord: 0.2ms | Allocations: 1150)
+
+
+Started GET "/" for ::1 at 2020-10-26 20:10:24 -0700
+Processing by ChatroomController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages" ORDER BY "messages"."created_at" DESC LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/models/message.rb:5:in `block in <class:Message>'
+  Rendering chatroom/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  Rendered collection of messages/_message.html.erb [7 times] (Duration: 12.4ms | Allocations: 5093)
+  Rendered chatroom/index.html.erb within layouts/application (Duration: 12.9ms | Allocations: 5366)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 73)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 20)
+Completed 200 OK in 40ms (Views: 36.4ms | ActiveRecord: 0.4ms | Allocations: 15516)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 20:10:24 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 20:10:24 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 20:10:24 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/logout" for ::1 at 2020-10-26 20:10:28 -0700
+Processing by SessionController#destroy as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 362)
+
+
+Started GET "/login" for ::1 at 2020-10-26 20:10:28 -0700
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 369)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 68)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 20)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms | Allocations: 9208)
+
+
+Started GET "/signup" for ::1 at 2020-10-26 20:10:31 -0700
+Processing by SessionController#signup as HTML
+  Rendering session/signup.html.erb within layouts/application
+  Rendered session/signup.html.erb within layouts/application (Duration: 1.3ms | Allocations: 427)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 68)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.0ms | Allocations: 9234)
+
+
+Started POST "/signup" for ::1 at 2020-10-26 20:10:40 -0700
+Processing by SessionController#create as HTML
+  Parameters: {"authenticity_token"=>"Zgyav/NGrkhKWnVADcCgHVUnZvzwIzjtb3kOz4a5QqoN5UbdxZW0Pgz/sOKnZbtP5oL3MCe609RdIByk1HbRig==", "user"=>{"username"=>"saram", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "button"=>""}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/session_controller.rb:20:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "saram"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:20:in `create'
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "saram"], ["password_digest", "$2a$12$ldZ1gcPD3mBsgKs22JxjIut4jyq5DP3dEtwf7sTY5eB8vt3cCbTh6"], ["created_at", "2020-10-27 03:10:40.219841"], ["updated_at", "2020-10-27 03:10:40.219841"]]
+  ↳ app/controllers/session_controller.rb:20:in `create'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/session_controller.rb:20:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 219ms (ActiveRecord: 2.2ms | Allocations: 4003)
+
+
+Started GET "/" for ::1 at 2020-10-26 20:10:40 -0700
+Processing by ChatroomController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages" ORDER BY "messages"."created_at" DESC LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/models/message.rb:5:in `block in <class:Message>'
+  Rendering chatroom/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  Rendered collection of messages/_message.html.erb [7 times] (Duration: 11.4ms | Allocations: 5093)
+  Rendered chatroom/index.html.erb within layouts/application (Duration: 12.4ms | Allocations: 5360)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 20)
+Completed 200 OK in 34ms (Views: 29.4ms | ActiveRecord: 1.0ms | Allocations: 15495)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 20:10:40 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 20:10:40 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 20:10:40 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/logout" for ::1 at 2020-10-26 20:11:00 -0700
+Processing by SessionController#destroy as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 362)
+
+
+Started GET "/login" for ::1 at 2020-10-26 20:11:00 -0700
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 369)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 68)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 20)
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.0ms | Allocations: 9201)
+
+
+Started GET "/signup" for ::1 at 2020-10-26 20:11:02 -0700
+Processing by SessionController#signup as HTML
+  Rendering session/signup.html.erb within layouts/application
+  Rendered session/signup.html.erb within layouts/application (Duration: 1.4ms | Allocations: 427)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 68)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.0ms | Allocations: 9234)
+
+
+Started POST "/signup" for ::1 at 2020-10-26 20:11:09 -0700
+Processing by SessionController#create as HTML
+  Parameters: {"authenticity_token"=>"K9Qq9CyieIYfWU/deWBlQ+W4r2PEpbQZrSMHQO/2FvhAPfaWGnFi8Fn8in/TxX4RVh0+rxM8XyCfehUrvTmF2A==", "user"=>{"username"=>"saraz", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "button"=>""}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/session_controller.rb:20:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "saraz"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:20:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/session_controller.rb:20:in `create'
+  Rendering session/signup.html.erb within layouts/application
+  Rendered session/signup.html.erb within layouts/application (Duration: 0.6ms | Allocations: 456)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 68)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 229ms (Views: 9.4ms | ActiveRecord: 0.3ms | Allocations: 14991)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 20:11:09 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 20:11:09 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 20:11:09 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started POST "/signup" for ::1 at 2020-10-26 20:11:20 -0700
+Processing by SessionController#create as HTML
+  Parameters: {"authenticity_token"=>"2T/vjjQX2AL9QtZyrYMmELZwraxqX2OskHot/ugYssC1n98RjhCQg+YXsGhHUVIyJLdoPE8sX9N/av21OdQITw==", "user"=>{"username"=>"saraz", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "button"=>""}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/session_controller.rb:20:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "saraz"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:20:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/session_controller.rb:20:in `create'
+  Rendering session/signup.html.erb within layouts/application
+  Rendered session/signup.html.erb within layouts/application (Duration: 0.6ms | Allocations: 450)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 68)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 222ms (Views: 10.4ms | ActiveRecord: 0.4ms | Allocations: 13153)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 20:11:20 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 20:11:20 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 20:11:20 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/signup" for ::1 at 2020-10-26 20:11:30 -0700
+Processing by SessionController#signup as HTML
+  Rendering session/signup.html.erb within layouts/application
+  Rendered session/signup.html.erb within layouts/application (Duration: 0.7ms | Allocations: 427)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 68)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.0ms | Allocations: 9229)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 20:11:30 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 20:11:30 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 20:11:30 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started POST "/signup" for ::1 at 2020-10-26 20:11:42 -0700
+Processing by SessionController#create as HTML
+  Parameters: {"authenticity_token"=>"/Wic9UU9pemZX7fH3LBJIAEK9P0S9Lb53IsTbzYuf6iRyKxq/zrtaIIK0d02Yj0Ck80xbTeHioYzm8Mk5+LFJw==", "user"=>{"username"=>"saraz", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "button"=>""}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/session_controller.rb:20:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "saraz"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:20:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/session_controller.rb:20:in `create'
+  Rendering session/signup.html.erb within layouts/application
+  Rendered session/signup.html.erb within layouts/application (Duration: 0.6ms | Allocations: 450)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 68)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 224ms (Views: 11.0ms | ActiveRecord: 0.2ms | Allocations: 13159)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 20:11:42 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 20:11:42 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 20:11:42 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started POST "/signup" for ::1 at 2020-10-26 20:11:53 -0700
+Processing by SessionController#create as HTML
+  Parameters: {"authenticity_token"=>"4/UBAl85+dMDtw4rPyIS16VIj9u5mTjIm+iQ9dfVnk2PVTGd5T6xUhjiaDHV8Gb1N49KS5zqBLd0+EC+Bhkkwg==", "user"=>{"username"=>"saraz", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "button"=>""}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/session_controller.rb:20:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "saraz"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:20:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "saraz"], ["password_digest", "$2a$12$hXqnpZzozdeHRofDjXEhoOY6jTO9D7uGHTYAZJXpV3o2qb55HKsIq"], ["created_at", "2020-10-27 03:11:53.536865"], ["updated_at", "2020-10-27 03:11:53.536865"]]
+  ↳ app/controllers/session_controller.rb:20:in `create'
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/session_controller.rb:20:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 213ms (ActiveRecord: 2.2ms | Allocations: 3952)
+
+
+Started GET "/" for ::1 at 2020-10-26 20:11:53 -0700
+Processing by ChatroomController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages" ORDER BY "messages"."created_at" DESC LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/models/message.rb:5:in `block in <class:Message>'
+  Rendering chatroom/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  Rendered collection of messages/_message.html.erb [7 times] (Duration: 5.4ms | Allocations: 5093)
+  Rendered chatroom/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 5360)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 20)
+Completed 200 OK in 17ms (Views: 14.8ms | ActiveRecord: 0.5ms | Allocations: 15490)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 20:11:53 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 20:11:53 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 20:11:53 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/logout" for ::1 at 2020-10-26 20:13:56 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionController#destroy as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 431)
+
+
+Started GET "/login" for ::1 at 2020-10-26 20:13:56 -0700
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 377)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 20)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms | Allocations: 9368)
+
+
+Started POST "/login" for ::1 at 2020-10-26 20:13:58 -0700
+Processing by SessionController#login as HTML
+  Parameters: {"authenticity_token"=>"Ga6/UpVZeeRnFe6SYdrcZ9FYMmNwHEtp3I5E9C01ROfILKq93nrTZSnnKVQH8ccDAbLB6wbQJtFYJNqpEPHevA==", "session"=>{"username"=>"sara.moshkgou@gmail.com", "password"=>"[FILTERED]"}, "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "sara.moshkgou@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:8:in `login'
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 366)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | Allocations: 68)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 9)
+Completed 200 OK in 20ms (Views: 12.5ms | ActiveRecord: 0.7ms | Allocations: 11536)
+
+
+Started GET "/cable" for ::1 at 2020-10-26 20:13:59 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 20:13:59 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 20:14:03 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 20:14:03 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/signup" for ::1 at 2020-10-26 20:14:29 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionController#signup as HTML
+  Rendering session/signup.html.erb within layouts/application
+  Rendered session/signup.html.erb within layouts/application (Duration: 0.5ms | Allocations: 435)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 71)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 20)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 9425)
+
+
+Started GET "/cable" for ::1 at 2020-10-26 20:14:37 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 20:14:37 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 20:14:38 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 20:14:38 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started POST "/signup" for ::1 at 2020-10-26 20:14:42 -0700
+Processing by SessionController#create as HTML
+  Parameters: {"authenticity_token"=>"pDBJnbRHIn3QDtB6GKABe+g/KjQrYv5ANmCVL9bDnl/P2ZX/gpQ4C5arFdiyBRopW5q7+Pz7FXkEOYdEhAwNfw==", "user"=>{"username"=>"saramoshggoo", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "button"=>""}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/session_controller.rb:20:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "saramoshggoo"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:20:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/session_controller.rb:20:in `create'
+  Rendering session/signup.html.erb within layouts/application
+  Rendered session/signup.html.erb within layouts/application (Duration: 0.6ms | Allocations: 452)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 68)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 9)
+Completed 200 OK in 228ms (Views: 9.3ms | ActiveRecord: 0.9ms | Allocations: 18100)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 20:14:42 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 20:14:42 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 20:14:42 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 20:14:48 -0700
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 20:14:48 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 20:14:55 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 20:14:55 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 20:14:57 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 20:14:57 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 20:15:44 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 20:15:46 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 20:15:46 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/signup" for ::1 at 2020-10-26 20:18:04 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionController#signup as HTML
+  Rendering session/signup.html.erb within layouts/application
+  Rendered session/signup.html.erb within layouts/application (Duration: 1.0ms | Allocations: 741)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 1.1ms | Allocations: 285)
+  Rendered layouts/_messages.html.erb (Duration: 0.9ms | Allocations: 162)
+Completed 200 OK in 25ms (Views: 24.5ms | ActiveRecord: 0.0ms | Allocations: 11397)
+
+
+Started GET "/cable" for ::1 at 2020-10-26 20:18:05 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 20:18:05 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 20:18:12 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 20:18:12 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/signup" for ::1 at 2020-10-26 20:22:49 -0700
+Processing by SessionController#signup as HTML
+  Rendering session/signup.html.erb within layouts/application
+  Rendered session/signup.html.erb within layouts/application (Duration: 1.3ms | Allocations: 741)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.5ms | Allocations: 285)
+  Rendered layouts/_messages.html.erb (Duration: 0.3ms | Allocations: 159)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms | Allocations: 11369)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 20:22:49 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 20:22:50 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 20:22:50 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started POST "/signup" for ::1 at 2020-10-26 20:23:03 -0700
+Processing by SessionController#create as HTML
+  Parameters: {"authenticity_token"=>"QtY0ETnE+e7E+VNM4jHy6PQe/59m9kkXvmGjffShUo8udgSOg8Oxb9+sNVYI44bKZtk6D0OFdWhRcXM2JW3oAA==", "user"=>{"username"=>"saraz", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "button"=>""}
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms | Allocations: 6959)
+
+
+  
+NameError (undefined local variable or method `attribute2' for #<Class:0x00007fe5c92ca978>
+Did you mean?  attribute):
+  
+app/models/user.rb:2:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/session_controller.rb:19:in `create'
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 20:23:03 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 20:24:33 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 20:24:33 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 20:24:41 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 20:24:41 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started POST "/signup" for ::1 at 2020-10-26 20:24:41 -0700
+Processing by SessionController#create as HTML
+  Parameters: {"authenticity_token"=>"QtY0ETnE+e7E+VNM4jHy6PQe/59m9kkXvmGjffShUo8udgSOg8Oxb9+sNVYI44bKZtk6D0OFdWhRcXM2JW3oAA==", "user"=>{"username"=>"saraz", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "button"=>""}
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 4479)
+
+
+  
+NoMethodError (undefined method `attr_accessible' for #<Class:0x00007fe5c50f58e0>
+Did you mean?  attr_accessor):
+  
+app/models/user.rb:2:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/session_controller.rb:19:in `create'
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 20:24:41 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 20:25:21 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 20:25:21 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started POST "/signup" for ::1 at 2020-10-26 20:25:27 -0700
+Processing by SessionController#create as HTML
+  Parameters: {"authenticity_token"=>"QtY0ETnE+e7E+VNM4jHy6PQe/59m9kkXvmGjffShUo8udgSOg8Oxb9+sNVYI44bKZtk6D0OFdWhRcXM2JW3oAA==", "user"=>{"username"=>"saraz", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "button"=>""}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/session_controller.rb:20:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "saraz"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:20:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/session_controller.rb:20:in `create'
+  Rendering session/signup.html.erb within layouts/application
+  Rendered session/signup.html.erb within layouts/application (Duration: 0.7ms | Allocations: 460)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 71)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 9)
+Completed 200 OK in 230ms (Views: 9.8ms | ActiveRecord: 0.9ms | Allocations: 18590)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 20:25:28 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 20:25:28 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 20:25:28 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 20:25:30 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 20:25:30 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started POST "/signup" for ::1 at 2020-10-26 20:25:40 -0700
+Processing by SessionController#create as HTML
+  Parameters: {"authenticity_token"=>"Y59MkjRoi7e1cTyWFFX2zFFsfuOKRy46Pr9WmF8RVjAPP3wNjm/DNq4kWoz+h4Luw6u7c680EkXRr4bTjt3svw==", "user"=>{"username"=>"saraz", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "button"=>""}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/session_controller.rb:20:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "saraz"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:20:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/session_controller.rb:20:in `create'
+  Rendering session/signup.html.erb within layouts/application
+  Rendered session/signup.html.erb within layouts/application (Duration: 0.5ms | Allocations: 450)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 68)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 9)
+Completed 200 OK in 219ms (Views: 9.0ms | ActiveRecord: 0.3ms | Allocations: 12692)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 20:25:40 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 20:25:40 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 20:25:40 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/signup" for ::1 at 2020-10-26 20:25:45 -0700
+Processing by SessionController#signup as HTML
+  Rendering session/signup.html.erb within layouts/application
+  Rendered session/signup.html.erb within layouts/application (Duration: 0.7ms | Allocations: 427)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 68)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 20)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms | Allocations: 9246)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 20:25:45 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 20:25:45 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 20:25:45 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started POST "/signup" for ::1 at 2020-10-26 20:26:02 -0700
+Processing by SessionController#create as HTML
+  Parameters: {"authenticity_token"=>"G32moSbjKAMboKps4x4Q49fA5uWK14DE/O2VYYHUgi533ZY+nORgggD1zHYJzGTBRQcjda+kvLsT/UUqUBg4oQ==", "user"=>{"username"=>"sanaz", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "button"=>""}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/session_controller.rb:20:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "sanaz"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:20:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "sanaz"], ["password_digest", "$2a$12$lLTGe/D71tPGwKRv5scWSO8JNJI8XI4aETsGj.gZGVkuDG9bPGqqi"], ["created_at", "2020-10-27 03:26:02.583684"], ["updated_at", "2020-10-27 03:26:02.583684"]]
+  ↳ app/controllers/session_controller.rb:20:in `create'
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/session_controller.rb:20:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 214ms (ActiveRecord: 1.9ms | Allocations: 4024)
+
+
+Started GET "/" for ::1 at 2020-10-26 20:26:02 -0700
+Processing by ChatroomController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" ORDER BY "messages"."created_at" DESC LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/models/message.rb:5:in `block in <class:Message>'
+  Rendering chatroom/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  Rendered collection of messages/_message.html.erb [7 times] (Duration: 7.9ms | Allocations: 6015)
+  Rendered chatroom/index.html.erb within layouts/application (Duration: 9.8ms | Allocations: 6718)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 73)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 20)
+Completed 200 OK in 31ms (Views: 21.3ms | ActiveRecord: 1.2ms | Allocations: 21569)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 20:26:02 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 20:26:02 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 20:26:02 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/logout" for ::1 at 2020-10-26 20:26:08 -0700
+Processing by SessionController#destroy as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 361)
+
+
+Started GET "/login" for ::1 at 2020-10-26 20:26:08 -0700
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 657)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 20)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.0ms | Allocations: 9631)
+
+
+Started POST "/login" for ::1 at 2020-10-26 20:26:18 -0700
+Processing by SessionController#login as HTML
+  Parameters: {"authenticity_token"=>"mXGrzd79dS2VPQLUIyEIUJF9xWE2d4f4FTm6qJVamzZI874ild7frNvPxRJFChM0QZc26UC76kCRkyT1qJ4BbQ==", "session"=>{"username"=>"sanaz", "password"=>"[FILTERED]"}, "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "sanaz"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:8:in `login'
+Redirected to http://localhost:3000/
+Completed 302 Found in 210ms (ActiveRecord: 0.2ms | Allocations: 1134)
+
+
+Started GET "/" for ::1 at 2020-10-26 20:26:18 -0700
+Processing by ChatroomController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages" ORDER BY "messages"."created_at" DESC LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/models/message.rb:5:in `block in <class:Message>'
+  Rendering chatroom/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  Rendered collection of messages/_message.html.erb [7 times] (Duration: 5.7ms | Allocations: 5093)
+  Rendered chatroom/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 5365)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 73)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 20)
+Completed 200 OK in 17ms (Views: 14.6ms | ActiveRecord: 0.5ms | Allocations: 15505)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 20:26:18 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 20:26:18 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 20:26:18 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started POST "/message" for ::1 at 2020-10-26 20:26:22 -0700
+Processing by MessagesController#create as JS
+  Parameters: {"message"=>{"body"=>"manam khoobam"}, "button"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Started POST "/message" for ::1 at 2020-10-26 20:26:22 -0700
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/messages_controller.rb:6:in `create'
+  [1m[36mMessage Create (0.4ms)[0m  [1m[32mINSERT INTO "messages" ("body", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "manam khoobam"], ["user_id", 6], ["created_at", "2020-10-27 03:26:22.687878"], ["updated_at", "2020-10-27 03:26:22.687878"]]
+  ↳ app/controllers/messages_controller.rb:6:in `create'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/messages_controller.rb:6:in `create'
+Processing by MessagesController#create as JS
+  Parameters: {"message"=>{"body"=>""}, "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered messages/_message.html.erb (Duration: 3.6ms | Allocations: 2298)
+No template found for MessagesController#create, rendering head :no_content
+[ActionCable] Broadcasting to chatroom_channel: {:mod_message=>"<div class=\"event\">\n  <div class=\"content\">\n    <div class=\"summary\">\n      <em>sanaz</em>: manam khoobam\n    </div>\n  </div>\n</div>\n"}
+Completed 204 No Content in 9ms (ActiveRecord: 0.2ms | Allocations: 4829)
+
+
+ChatroomChannel transmitting {"mod_message"=>"<div class=\"event\">\n  <div class=\"content\">\n    <div class=\"summary\">\n      <em>sanaz</em>: manam khoobam\n    </div>\n  </div>\n</div>\n"} (via streamed from chatroom_channel)
+Completed 200 OK in 25ms (Views: 9.4ms | ActiveRecord: 1.5ms | Allocations: 11335)
+
+
+ChatroomChannel transmitting {"mod_message"=>"<div class=\"event\">\n  <div class=\"content\">\n    <div class=\"summary\">\n      <em>sanaz</em>: manam khoobam\n    </div>\n  </div>\n</div>\n"} (via streamed from chatroom_channel)
+Started GET "/" for ::1 at 2020-10-26 20:26:47 -0700
+Processing by ChatroomController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" ORDER BY "messages"."created_at" DESC LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/models/message.rb:5:in `block in <class:Message>'
+  Rendering chatroom/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  Rendered collection of messages/_message.html.erb [8 times] (Duration: 13.9ms | Allocations: 5804)
+  Rendered chatroom/index.html.erb within layouts/application (Duration: 14.5ms | Allocations: 6076)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 46ms (Views: 42.2ms | ActiveRecord: 0.8ms | Allocations: 16214)
+
+
+Started GET "/cable" for ::1 at 2020-10-26 20:26:47 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 20:26:47 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 20:26:54 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/" for ::1 at 2020-10-26 20:29:02 -0700
+Processing by ChatroomController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" ORDER BY "messages"."created_at" DESC LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/models/message.rb:5:in `block in <class:Message>'
+  Rendering chatroom/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  Rendered collection of messages/_message.html.erb [8 times] (Duration: 6.5ms | Allocations: 5804)
+  Rendered chatroom/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 6071)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 26ms (Views: 22.1ms | ActiveRecord: 0.9ms | Allocations: 16198)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 20:29:02 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 20:29:02 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 20:29:02 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started POST "/message" for ::1 at 2020-10-26 20:29:07 -0700
+Started POST "/message" for ::1 at 2020-10-26 20:29:07 -0700
+Processing by MessagesController#create as JS
+  Parameters: {"message"=>{"body"=>"khoobi"}, "button"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/messages_controller.rb:6:in `create'
+  [1m[36mMessage Create (0.5ms)[0m  [1m[32mINSERT INTO "messages" ("body", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "khoobi"], ["user_id", 6], ["created_at", "2020-10-27 03:29:07.465143"], ["updated_at", "2020-10-27 03:29:07.465143"]]
+  ↳ app/controllers/messages_controller.rb:6:in `create'
+Processing by MessagesController#create as JS
+  Parameters: {"message"=>{"body"=>""}, "button"=>""}
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+No template found for MessagesController#create, rendering head :no_content
+Completed 204 No Content in 4ms (ActiveRecord: 0.2ms | Allocations: 2507)
+
+
+  ↳ app/controllers/messages_controller.rb:6:in `create'
+  Rendered messages/_message.html.erb (Duration: 0.1ms | Allocations: 11)
+[ActionCable] Broadcasting to chatroom_channel: {:mod_message=>"<div class=\"event\">\n  <div class=\"content\">\n    <div class=\"summary\">\n      <em>sanaz</em>: khoobi\n    </div>\n  </div>\n</div>\n"}
+Completed 200 OK in 13ms (Views: 0.5ms | ActiveRecord: 1.6ms | Allocations: 6337)
+
+
+ChatroomChannel transmitting {"mod_message"=>"<div class=\"event\">\n  <div class=\"content\">\n    <div class=\"summary\">\n      <em>sanaz</em>: khoobi\n    </div>\n  </div>\n</div>\n"} (via streamed from chatroom_channel)
+ChatroomChannel transmitting {"mod_message"=>"<div class=\"event\">\n  <div class=\"content\">\n    <div class=\"summary\">\n      <em>sanaz</em>: khoobi\n    </div>\n  </div>\n</div>\n"} (via streamed from chatroom_channel)
+Started GET "/logout" for ::1 at 2020-10-26 20:29:11 -0700
+Processing by SessionController#destroy as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 367)
+
+
+Started GET "/login" for ::1 at 2020-10-26 20:29:11 -0700
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 377)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 20)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.0ms | Allocations: 9210)
+
+
+Started GET "/login" for ::1 at 2020-10-26 20:33:18 -0700
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 662)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.6ms | Allocations: 337)
+  Rendered layouts/_messages.html.erb (Duration: 0.8ms | Allocations: 159)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.0ms | Allocations: 11350)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 20:33:18 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 20:33:18 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 20:33:18 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started GET "/signup" for ::1 at 2020-10-26 20:33:23 -0700
+Processing by SessionController#signup as HTML
+  Rendering session/signup.html.erb within layouts/application
+  Rendered session/signup.html.erb within layouts/application (Duration: 3.0ms | Allocations: 735)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | Allocations: 101)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 0.0ms | Allocations: 9704)
+
+
+Started GET "/login" for ::1 at 2020-10-26 20:33:59 -0700
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 369)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | Allocations: 98)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.0ms | Allocations: 9214)
+
+
+Started POST "/login" for ::1 at 2020-10-26 20:34:27 -0700
+Processing by SessionController#login as HTML
+  Parameters: {"authenticity_token"=>"3mDAEsFqgN0axGZaLOwtOgy7NRB9FQgS+84cmi/TpTgP4tX9ikkqXFQ2oZxKxzZe3FHGmAvZZap/ZILHEhc/Yw==", "session"=>{"username"=>"sanaz", "password"=>"[FILTERED]"}, "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "sanaz"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:8:in `login'
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 365)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | Allocations: 98)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 9)
+Completed 200 OK in 231ms (Views: 19.9ms | ActiveRecord: 0.2ms | Allocations: 9826)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 20:34:27 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 20:34:27 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 20:34:27 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Started POST "/login" for ::1 at 2020-10-26 20:34:39 -0700
+Processing by SessionController#login as HTML
+  Parameters: {"authenticity_token"=>"TWhkKmEf8pMgNCki+kxoQvfAxJ/GzmpRD/RkaDEwsFkhyFS12xi6EjthTzgQnhxgZQcBD+O9Vi7g5LQj4PwK1g==", "session"=>{"username"=>"sara", "password"=>"[FILTERED]"}, "button"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "sara"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:8:in `login'
+Redirected to http://localhost:3000/
+Completed 302 Found in 209ms (ActiveRecord: 0.3ms | Allocations: 993)
+
+
+Started GET "/" for ::1 at 2020-10-26 20:34:39 -0700
+Processing by ChatroomController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages" ORDER BY "messages"."created_at" DESC LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/models/message.rb:5:in `block in <class:Message>'
+  Rendering chatroom/index.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  Rendered collection of messages/_message.html.erb [9 times] (Duration: 7.7ms | Allocations: 6640)
+  Rendered chatroom/index.html.erb within layouts/application (Duration: 10.0ms | Allocations: 7279)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 73)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 20)
+Completed 200 OK in 24ms (Views: 20.5ms | ActiveRecord: 0.5ms | Allocations: 18204)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-10-26 20:34:39 -0700
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2020-10-26 20:34:39 -0700
+Started GET "/cable/" [WebSocket] for ::1 at 2020-10-26 20:34:39 -0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel

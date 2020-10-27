@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   root 'chatroom#index'
   get 'login', to: 'session#new'
   get 'logout', to: 'session#destroy'
+  get 'signup', to:'session#signup'
+  post 'signup', to:'session#create'
   post 'login', to:'session#login'
   post 'message' , to:'messages#create'
   mount ActionCable.server, at: '/cable'
